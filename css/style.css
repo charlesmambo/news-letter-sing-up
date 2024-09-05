@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+
+/* --- Dark Slate Grey: hsl(234, 29%, 20%)
+- Charcoal Grey: hsl(235, 18%, 26%)
+- Grey: hsl(231, 7%, 60%)
+- White: hsl(0, 0%, 100%) */
+
+body {
+    font-size: 1rem;
+    font-family: "Roboto", sans-serif;
+    background-color: hsl(234, 21%, 19%);
+    color: hsl(234, 29%, 20%);
+    height: 100vh;
+}
+
+main {
+    height: 100vh;
+    justify-content: center;
+}
+
+.container,
+main{
+    display: flex;
+    align-items: center;
+}
+
+.container {
+    background-color: hsl(0, 0%, 100%);
+    width: 48vw;
+    padding: 1.2rem;
+    gap: 1.2rem;
+    border-radius: 0.8rem;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    justify-content: space-between;
+}
+
+.text-container {
+width: 26vw;
+}
+
+h1{
+    margin-bottom: 0.8rem;
+    font-size: 1.7rem;
+}
+
+p  {
+    font-size: 0.87rem;
+}
+
+.marked-text {
+    gap: 0.7rem;
+    margin: 0.8rem 0;
+}
+
+.marked-text,
+.form-text{
+    display: flex;
+    align-items: center;
+}
+
+
+.marked-text  img {
+    width: 0.8rem;
+}
+
+
+form {
+    margin-top: 1.4rem;
+}
+
+.form-text {
+    justify-content: space-between;
+}
+
+
+.invalid-text {
+    font-size: 0.7rem !important;  
+    color: hsl(0, 96%, 44%);
+    display: none;
+}
+
+.form-control input {
+    margin-top: 0.5rem;
+    border: 1px solid hsl(231, 7%, 60%);
+    font-size: 0.8rem;
+    padding: 0.54rem 0.6rem;
+    outline: none;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+.form-control input:hover {
+    border: 1.1px solid hsl(231, 7%, 60%);  
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+.form-control input,
+.form-control button {
+    border-radius: 0.3rem;
+    width: 100%;
+}
+
+
+.form-control input::placeholder {
+    font-size: 0.8rem;  
+    color:  hsl(231, 7%, 60%);;
+}
+
+.form-control button {
+    border: none;
+    margin-top: 0.9rem;
+    padding: 0.64rem 0.6rem;
+    background-color: hsl(234, 29%, 20%);
+    color: hsl(0, 14%, 96%);
+    letter-spacing: 1px;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    transition: color 0.5s ease;
+}
+
+.form-control button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #ff9644, #ff5b62);
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.form-control button:hover::before {
+    opacity: 1;
+}
+
+.form-control button:hover {
+    color: hsl(0, 14%, 96%);
+}
+
+
+.main-img {
+    width: 18vw;
+    margin-top: 1rem;
+}
+
+.main-img img {
+    display: block;
+    width: 100%;
+}
