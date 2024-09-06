@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 * {
     margin: 0;
@@ -6,6 +6,7 @@
     text-decoration: none;
     list-style: none;
     box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
 }
 
 
@@ -16,15 +17,15 @@
 
 body {
     font-size: 1rem;
-    font-family: "Roboto", sans-serif;
-    background-color: hsl(234, 21%, 19%);
+    font-weight: 500;
+    background-color: hsl(160, 22%, 19%);
     color: hsl(234, 29%, 20%);
-    height: 100vh;
 }
 
 main {
     height: 100vh;
     justify-content: center;
+    position: relative;
 }
 
 .container,
@@ -35,7 +36,7 @@ main{
 
 .container {
     background-color: hsl(0, 0%, 100%);
-    width: 48vw;
+    width: 49vw;
     padding: 1.2rem;
     gap: 1.2rem;
     border-radius: 0.8rem;
@@ -44,7 +45,7 @@ main{
 }
 
 .text-container {
-width: 26vw;
+width: 28vw;
 }
 
 h1{
@@ -54,6 +55,7 @@ h1{
 
 p  {
     font-size: 0.87rem;
+    color: hsl(231, 13%, 30%);;
 }
 
 .marked-text {
@@ -69,7 +71,7 @@ p  {
 
 
 .marked-text  img {
-    width: 0.8rem;
+    width: 0.9rem;
 }
 
 
@@ -95,6 +97,7 @@ form {
     padding: 0.54rem 0.6rem;
     outline: none;
     transition: border 0.3s ease, box-shadow 0.3s ease;
+    font-weight: 500;
 }
 .form-control input:hover {
     border: 1.1px solid hsl(231, 7%, 60%);  
@@ -106,13 +109,19 @@ form {
     width: 100%;
 }
 
+.form-control input.email {
+    border: 1px solid hsl(0, 96%, 44%) !important;
+    color: hsl(0, 96%, 44%) !important;
+    background-color: #fdd1d3eb;
+}
 
 .form-control input::placeholder {
     font-size: 0.8rem;  
     color:  hsl(231, 7%, 60%);;
 }
 
-.form-control button {
+.form-control button,
+button {
     border: none;
     margin-top: 0.9rem;
     padding: 0.64rem 0.6rem;
@@ -124,9 +133,12 @@ form {
     z-index: 1;
     overflow: hidden;
     transition: color 0.5s ease;
+    font-weight: 500;
+    font-family: inherit;
 }
 
-.form-control button::before {
+.form-control button::before,
+button::before {
     content: '';
     position: absolute;
     top: 0;
@@ -139,11 +151,13 @@ form {
     transition: opacity 0.5s ease;
 }
 
-.form-control button:hover::before {
+.form-control button:hover::before,
+button:hover::before {
     opacity: 1;
 }
 
-.form-control button:hover {
+.form-control button:hover,
+button:hover {
     color: hsl(0, 14%, 96%);
 }
 
@@ -157,3 +171,130 @@ form {
     display: block;
     width: 100%;
 }
+
+/* success box styles */
+.success {
+    width: 24vw;
+    background-color: hsl(0, 0%, 100%);
+    padding: 1.5rem;
+    border-radius: 0.8rem;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    position: absolute;
+    display: none;
+}
+
+.success  img {
+    width: 1.3rem;
+}
+.success  p {
+    font-size: 0.8rem;
+    line-height: 18px;
+}
+
+h2 {
+    margin: 0.8rem 0;
+    font-size: 1.4rem;
+    display: block;
+}
+
+button {
+    border-radius: 0.3rem;
+    width: 76%;
+}
+
+.mobile {
+    display: none !important;
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+      background-color: lightblue;
+      height: 100%;
+    }
+    main {
+        height: 100%;
+    }
+
+    .success {
+        width: 92vw;
+        padding: 1.8rem;
+    }
+    .success  img {
+        width: 1.9rem;
+    }
+    h2 {
+        font-size: 1.9rem;
+        margin: 1rem 0;
+    }
+
+    p {
+        font-size: 1.1rem !important;  
+    }
+    
+    .success  p {
+        line-height: 25px;
+    }
+
+    .success button {
+       padding: 1.1rem !important;
+       margin-top: 1.3rem;
+       width: 84%;
+       font-size: 1.1rem !important;  
+    }
+
+    .container {
+        width: 92vw;
+        padding:0 !important;
+        gap: 1.2rem;
+        flex-direction: column-reverse;
+        margin: 2rem 0;
+    }
+
+    .text-container {
+        width: 80vw;
+        margin-bottom: 2rem;
+        }
+    .main-img{
+        width: 100%;
+    }
+
+    h1{
+        margin-bottom: 1.4rem;
+        font-size: 2rem;
+    }
+    .text-container p {
+        font-size: 1.1rem !important; 
+    }
+
+    .marked-text  img {
+        width: 1.2rem;
+    }
+    .form-control input,
+.form-control button {
+    font-size: 1.03rem;
+    padding: 0.8rem 0.6rem;
+    margin: 0.5rem 0;
+}
+
+.form-text p {
+    margin: 0.4rem 0;
+}
+
+.form-control input::placeholder {
+    font-size: 1rem;  
+}
+
+
+.mobile {
+    display: block;
+    position: relative;
+    top: -1.04rem;
+    border-top-left-radius: 0.8rem;
+    border-top-right-radius: 0.8rem;
+}
+.desktop {
+    display: none !important;
+}
+
+
+  }
