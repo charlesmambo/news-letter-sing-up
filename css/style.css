@@ -286,7 +286,7 @@ button {
 
 
 .mobile {
-    display: block;
+    display: block !important;
     position: relative;
     top: -1.04rem;
     border-top-left-radius: 0.8rem;
