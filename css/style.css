@@ -295,6 +295,8 @@ button {
 .desktop {
     display: none !important;
 }
-
+.invalid-text {
+    font-size: 0.6rem !important;  
+}
 
   }
